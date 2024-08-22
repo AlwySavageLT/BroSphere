@@ -1,0 +1,146 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.authContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Make the h2 selector local */
+.authContainer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.googleButton,
+.emailButton,
+.submitButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.googleButton {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.googleButton img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.emailButton {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.submitButton {
+  background-color: #1a073a;
+  border: none;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background-color: #140529;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.checkbox input {
+  margin-right: 0.5rem;
+}
+
+.switchMode {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.switchMode button {
+  background: none;
+  border: none;
+  color: #1a073a;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* HarmonyOS Next beta5 animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.authContainer {
+  animation: scaleIn 0.3s ease-out;
+}
